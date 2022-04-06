@@ -1,5 +1,5 @@
 SELECT
-	Incident_Date
+	Date
 ,	Incident_Type_Code
 ,	Incident_Type
 ,	Incident_Type_Category_Code
@@ -11,7 +11,7 @@ FROM
 		FF.Incident_ID_Internal								AS 'Fire_Internal_ID'
 	,	FDB.Basic_Incident_Number							AS 'Incident_Number'
 	,	FDB.Basic_Incident_Date_Time						AS 'Incident_Date_Time'
-	,	CONVERT(DATE, Basic_Incident_Date_Time)				AS 'Incident_Date'
+	,	CONVERT(DATE, Basic_Incident_Date_Time)				AS 'Date'
 	,	CONVERT(TIME, Basic_Incident_Date_Time)				AS 'Incident_Time'
 	,	Basic_Incident_Type_Code							AS 'Incident_Type_Code'
 	,	Basic_Incident_Type_Code_And_Description			AS 'Incident_Type'
@@ -28,10 +28,10 @@ FROM
 
 
 GROUP BY
-	Incident_Date
+	Date
 ,	Incident_Type_Code
 ,	Incident_Type
 ,	Incident_Type_Category_Code
 ,	Incident_Type_Category
 
-ORDER BY Incident_Date ASC
+ORDER BY Date ASC

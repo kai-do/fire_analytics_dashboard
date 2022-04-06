@@ -2,7 +2,7 @@ SELECT DISTINCT
 	[IncidentNumber]								AS 'incident_number'
 ,	[CallSign]										AS 'callsign'
 ,	[Shift]											AS 'shift'
-,	[IncidentDate]									AS 'incident_date_time'
+,	[IncidentDate]									AS 'Date'
 ,	[DispatchTime]									AS 'dispatch_date_time'
 ,	[EnrouteTime]									AS 'en_route_date_time'
 ,	[OnSceneTime]									AS 'on_scene_date_time'

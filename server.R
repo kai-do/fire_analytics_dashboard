@@ -5,6 +5,8 @@ server <- function(input, output, session) {
       df <- incident_counts_df
     } else if (input$dataset_select == "climate_df") {
       df <- climate_df
+    } else if (input$dataset_select == "unit_responses_df") {
+      df <- unit_responses_df
     }
   })
   

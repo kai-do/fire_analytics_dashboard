@@ -9,5 +9,9 @@ max_date <- min(c(max(incident_counts_df$Date), max(climate_df$Date)))
 
 zoo_label <- "label"
 
-dataset_names <- c("incident_counts_df","climate_df")
+dataset_names <- c("incident_counts_df","climate_df", "unit_responses_df")
 aggregate_types <- c("mean","sum")
+
+incident_types <- sort(unique(unit_responses_df$incident_type))
+shifts <- sort(unique(unit_responses_df$shift))
+callsigns <- sort(unique(unit_responses_df$callsign))
